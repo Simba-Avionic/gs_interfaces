@@ -13,7 +13,7 @@ find_package(geometry_msgs REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/TankingControl.msg"
   "msg/tankowanie/LoadCell.msg"
-  "msg/tankowanie/LoadCellStamped.msg"
+  "msg/tankowanie/Tensobelki.msg"
 
   "srv/FixGPSPosition.srv"
   DEPENDENCIES builtin_interfaces std_msgs geometry_msgs
