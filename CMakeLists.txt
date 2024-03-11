@@ -11,9 +11,17 @@ find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/TankingControl.msg"
-  "msg/tankowanie/LoadCell.msg"
-  "msg/tankowanie/Tensobelki.msg"
+  "msg/tanking_msgs/LoadCell.msg"
+  "msg/tanking_msgs/TankingCmds.msg"
+  "msg/tanking_msgs/TankingControl.msg"
+  "msg/tanking_msgs/Tensobelki.msg"
+  "msg/tanking_msgs/ValveSensors.msg"
+  "msg/tanking_msgs/ValveServos.msg"
+  "msg/rocket_msgs/RocketStatus.msg"
+  "msg/rocket_msgs/RocketTelemetry.msg"
+  "msg/radio_msgs/Telemetry433.msg
+  "msg/radio_msgs/RadioTelemetry.msg"
+  "msg/control_panel_msgs/ControlPanelSwitches.msg"
 
   "srv/FixGPSPosition.srv"
   DEPENDENCIES builtin_interfaces std_msgs geometry_msgs
