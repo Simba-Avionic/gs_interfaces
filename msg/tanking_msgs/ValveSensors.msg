@@ -1,8 +1,8 @@
 std_msgs/Header header
 
-% TODO [K]?
+# TODO: integer? [K]?
 uint8 temperature
-% TODO [K]?
+# TODO: integer? [K]?
 uint8 temperature_raspberry
-% [Pa]
+# TODO: integer? [Pa]
 uint8 pressure

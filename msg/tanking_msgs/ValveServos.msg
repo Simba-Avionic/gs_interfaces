@@ -1,6 +1,6 @@
 std_msgs/Header header
 
-% TODO [deg]?
+# TODO: integer? [deg]?
 uint8 servo1_position
-% TODO [deg]?
+# TODO: integer? [deg]?
 uint8 servo2_position

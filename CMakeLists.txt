@@ -19,7 +19,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/tanking_msgs/ValveServos.msg"
   "msg/rocket_msgs/RocketStatus.msg"
   "msg/rocket_msgs/RocketTelemetry.msg"
-  "msg/radio_msgs/Telemetry433.msg
+  "msg/radio_msgs/Telemetry433.msg"
   "msg/radio_msgs/RadioTelemetry.msg"
   "msg/control_panel_msgs/ControlPanelSwitches.msg"
 
