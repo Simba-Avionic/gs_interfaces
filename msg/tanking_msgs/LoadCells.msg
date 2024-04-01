@@ -1,0 +1,3 @@
+std_msgs/Header header
+uint32 load_cell_1
+uint32 load_cell_2
