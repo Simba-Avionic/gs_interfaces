@@ -12,6 +12,7 @@ find_package(geometry_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/tanking_msgs/LoadCell.msg"
+  "msg/tanking_msgs/LoadCells.msg"
   "msg/tanking_msgs/TankingCmds.msg"
   "msg/tanking_msgs/TankingControl.msg"
   "msg/tanking_msgs/Tensobelki.msg"
