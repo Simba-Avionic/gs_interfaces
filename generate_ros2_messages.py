@@ -31,8 +31,6 @@ def create_msg_files():
 
     return message_files_names
 
-# def modify_cmake(message_files_names): (potentially CMake edit could be automated)
-
 
 if __name__ == "__main__":
     msg_names = create_msg_files()
