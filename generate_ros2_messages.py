@@ -1,7 +1,7 @@
 import os
 import json
 
-CONFIG_PATH = "../server/config.json"
+CONFIG_PATH = "../config.json"
 # CMAKE_PATH = "CMakeLists.txt"
 NEW_LINE = "\n"
 
