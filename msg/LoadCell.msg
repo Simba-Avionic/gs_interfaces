@@ -1,4 +1,8 @@
+# LoadCell message
+# ---
 int32   raw_val
-float32 kg_total        # point total: total mass in kg, calibrated - linear
-float32 kg_p_0          # point 0: mass with zero load offset
-float32 kg_p_1          # point 1: mass with offset e.x. mass of the oxidizer
+int32   vehicle_point
+int32   fuel_point
+float32 raw_kg
+float32 vehicle_kg
+float32 fuel_kg

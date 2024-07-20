@@ -1,5 +1,8 @@
 # LoadCells message
 # ---
-std_msgs/Header header 
-int32 load_cell_1 
-int32 load_cell_2 
+std_msgs/Header header
+gs_interfaces/LoadCell tensoL
+gs_interfaces/LoadCell tensoP
+float32 combined_raw_kg
+float32 combined_vehicle_kg
+float32 combined_fuel_kg
