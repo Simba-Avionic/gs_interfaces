@@ -9,3 +9,4 @@ int32 messages_received_per_second
 int32 messages_sent_per_second
 int32 bytes_received_per_second
 int32 bytes_sent_per_second
+float32 good_messages_ratio_received_per_second
