@@ -4,3 +4,8 @@ int64 total_bytes_sent
 int64 total_bytes_received
 int64 total_messages_received
 int64 good_messages_received
+int64 total_messages_sent
+int32 messages_received_per_second
+int32 messages_sent_per_second
+int32 bytes_received_per_second
+int32 bytes_sent_per_second
