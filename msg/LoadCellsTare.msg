@@ -1,4 +1,4 @@
-# LoadCells message
+# LoadCellsTare message
 # ---
 std_msgs/Header header
 
