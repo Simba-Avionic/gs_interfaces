@@ -1,5 +1,6 @@
 # UartStatistics message
 # ---
+std_msgs/Header header
 int64 total_bytes_sent
 int64 total_bytes_received
 int64 total_messages_received
