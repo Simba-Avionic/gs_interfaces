@@ -1,14 +1,23 @@
 # UartStatistics message
 # ---
 std_msgs/Header header
-int64 total_bytes_sent
-int64 total_bytes_received
-int64 total_messages_received
-int64 good_messages_received
-int64 total_messages_sent
-int32 messages_received_per_second
-int32 good_messages_received_per_second
-int32 messages_sent_per_second
-int32 bytes_received_per_second
-int32 bytes_sent_per_second
+
+uint32 total_bytes_sent
+uint32 total_bytes_received
+
+uint32 total_messages_sent
+uint32 total_messages_received
+
+uint32 good_messages_received
+uint32 good_messages_received_per_second
+
+uint32 messages_sent_per_second
+uint32 messages_received_per_second
+
+uint32 bytes_sent_per_second
+uint32 bytes_received_per_second
+
 float32 good_messages_ratio_received_per_second
+
+uint32 messages_overwritten
+uint32 buffor_overflows
