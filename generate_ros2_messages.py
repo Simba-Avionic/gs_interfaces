@@ -1,32 +1,17 @@
 import os
+import sys
 import json
 import xml.etree.ElementTree as ET
 
-CONFIG_PATH = "../config.json"
-SIMBA_XML_PATH = "../mavlink/message_definitions/v1.0/simba.xml"
 NEW_LINE = "\n"
 
-# Mapping from MAVLink types to ROS message types
-type_mapping = {
-    'uint64_t': 'uint64',
-    'int64_t': 'int64',
-    'uint32_t': 'uint32',
-    'int32_t': 'int32',
-    'uint16_t': 'uint16',
-    'int16_t': 'int16',
-    'uint8_t': 'uint8',
-    'int8_t': 'int8',
-    'float': 'float32',
-    'double': 'float64'
-}
-
-def convert_message_name(name):
-    # Convert message name from UPPERCASE_UNDERSCORE to CamelCase
-    return ''.join(word.capitalize() for word in name.lower().split('_'))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import utils
+from utils.paths import CONFIG_JSON_PATH, SIMBA_XML_PATH
 
 def create_msg_files():
     # Read config.json
-    with open(CONFIG_PATH, 'r') as f:
+    with open(CONFIG_JSON_PATH, 'r') as f:
         config = json.load(f)
 
     message_files_names = []
@@ -75,12 +60,12 @@ def create_msg_files_from_xml():
 
     # Process XML data
     for message in root.findall('messages/message'):
-        msg_type = convert_message_name(message.get('name'))
+        msg_type = utils.convert_message_name(message.get('name'))
         msg_definition = f"# {msg_type} message"
         msg_definition += (f"{NEW_LINE}# ---{NEW_LINE}")
         msg_definition += f"std_msgs/Header header{NEW_LINE}"
         for field in message.findall('field'):
-            field_type = type_mapping.get(field.get('type'), field.get('type'))
+            field_type = utils.get_type_mapping(field.get('type'))
             field_name = field.get('name')
             msg_definition += (f"{field_type} {field_name} {NEW_LINE}")
 
