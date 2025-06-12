@@ -1,13 +1,17 @@
 import os
 import sys
 import json
+import argparse
 import xml.etree.ElementTree as ET
 
+CONFIG_PATH = "../config.json"
+SIMBA_XML_PATH = "../mavlink/simba_mavlink/simba.xml"
 NEW_LINE = "\n"
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import utils
 from utils.paths import CONFIG_JSON_PATH, SIMBA_XML_PATH
+
 
 def create_msg_files():
     # Read config.json
@@ -48,7 +52,7 @@ def create_msg_files():
 
         print(f'Message definition written to {msg_file_path}')
         message_files_names.append(f'{msg_type}.msg')
-    
+
     return message_files_names
 
 
@@ -79,7 +83,29 @@ def create_msg_files_from_xml():
 
     return message_files_names
 
+
 if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(
+        description='Generate ROS message files from JSON and/or XML sources.')
+    parser.add_argument('--json', action='store_true',
+                        help='Generate messages from config.json')
+    parser.add_argument('--xml', action='store_true',
+                        help='Generate messages from simba.xml')
+    parser.add_argument('--all', action='store_true',
+                        help='Generate messages from both sources')
+    
+    args = parser.parse_args()
+
     os.makedirs('msg', exist_ok=True)
-    msg_names = create_msg_files()
-    msg_names_xml = create_msg_files_from_xml()
+
+    if not (args.json or args.xml or args.all):
+        args.json = True
+
+    if args.json or args.all:
+        print("Generating ROS messages from JSON...")
+        _ = create_msg_files()
+        
+    if args.xml or args.all:
+        print("Generating ROS messages from XML...")
+        _ = create_msg_files_from_xml()
