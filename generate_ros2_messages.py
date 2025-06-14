@@ -9,8 +9,8 @@ SIMBA_XML_PATH = "../mavlink/simba_mavlink/simba.xml"
 NEW_LINE = "\n"
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-import utils
-from utils.paths import CONFIG_JSON_PATH, SIMBA_XML_PATH
+import shared.utils as utils
+from shared.paths import CONFIG_JSON_PATH, SIMBA_XML_PATH
 
 
 def create_msg_files():
