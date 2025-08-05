@@ -1,8 +1,5 @@
-# LoadCellsParams message
+# Power message
 # ---
-std_msgs/Header header
 
-float32 shunt_voltage
-float32 bus_voltage
-float32 power
-float32 current
+float32 bus_voltage_V
+float32 current_mA
