@@ -2,4 +2,3 @@ build/
 .vscode/
 install/
 log/
-*.msg
