@@ -1,11 +1,6 @@
 # gs_interfaces
 Paczka zawiera definicje wiadomości ROS2 dla ground segmentu 
 
-## Creating messages for this project - the easy way
-1. You can generate message definitions files by editing config.json (assuming that gs_interfaces is a submodule of gs_web_app)
-and running `python3 generate_ros2_messages.py` in console
-2. And then adding the message file name in `CMakeLists.txt` file in the `rosidl_generate_interfaces` section
-
 ## knowdlege base about working with msgs instruction
 
 ### 1. Creating message
