@@ -2,13 +2,11 @@
 # ---
 std_msgs/Header header
 
-bool tare_rocket_point
-bool tare_empty_rocket_point
+# before putting rocket on load cells
+bool tare_rocket
 
-bool set_scale_left
-float64 scale_left
-bool set_scale_right
-float64 scale_right
+# before tanking in oxidizer
+bool tare_oxidizer
 
-bool set_lean_angle
-float32 lean_angle
+# before tanking in pressurizer
+bool tare_pressurizer
