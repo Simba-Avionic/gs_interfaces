@@ -1,6 +1,6 @@
 # SimbaTankTemperature message
 # ---
 std_msgs/Header header
-int16 temp1
-int16 temp2
-int16 temp3
+int16 upper_tank
+int16 middle_tank
+int16 lower_tank
