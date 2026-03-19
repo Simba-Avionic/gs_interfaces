@@ -1,4 +1,4 @@
 # SimbaMaxAltitude message
 # ---
 std_msgs/Header header
-int32 alt
+int32 altitude
