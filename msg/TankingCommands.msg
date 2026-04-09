@@ -2,8 +2,8 @@
 # ---
 std_msgs/Header header 
 
-bool valve_feed_oxidizer
-bool valve_feed_pressurizer
+uint8 valve_feed_oxidizer
+uint8 valve_feed_pressurizer
 
 bool valve_vent_oxidizer
 bool valve_vent_pressurizer
